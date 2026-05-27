@@ -1,5 +1,45 @@
 # Changelog
 
+## 1.0.0 (2026-05-27)
+
+
+### Features
+
+* Add meta.yaml in bio ([2fdf411](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/2fdf4119883e65d593eabad934fb519855bb9e8d))
+* Add rules.smk and delete the "wrapper" part inside and add the "conda", "script" part with the right paths ([65d8758](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/65d8758724ec7bde9a45beed168c9da4b4bea6fa))
+* Adicionar a rule filter_memote ([5845beb](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/5845beb4e070d777177c708b0bac153ac8e82879))
+* Changing the channels order on the workflow env ([358418e](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/358418eacd80cd2978280ea97e08e0417f769a50))
+* Creação de um script produzido pelo memote, que extrai o score total e as métricas chave e por fim escreve tudo num só unico TSV ([812d2e9](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/812d2e9b441f20237b42a680654a5bbe587052f0))
+* deleted common rule ([2b4ddda](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/2b4ddda6af0b3ae8cb9e8ac0cf8c82eb3495e301))
+* deletes rule ([c631682](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/c631682bfb17241c2d36df8ae0b9cbec94af20bd))
+* Leitura dos ficheiros score.json do memote e filtra por score total ([8892ff2](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/8892ff2e0766b7035d34811e61f1041f5f96505e))
+* Moving .yaml from bio to workflow/env ([e495be9](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/e495be9ea16bf39f610bb7a7dc957c68ef40a0f8))
+* Moving the envirnoment of the wrappers to the right place ([3033cde](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/3033cdee72d8c661502a7a8a61f22a19c7e766a4))
+* Moving the wrappers to the script fold ([3772046](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/3772046f420ef1ca830ec8ebb12fe60ac235e52a))
+* Not necessary ([cf138f0](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/cf138f080054f97a66450e2b863c1e862112db39))
+* recebe ficheiros quality.tsv do CheckM, aplica thresholds do config e produz 2 outputs: uma tabela resumo com pass/fail e uma lista dos MAGs que passam ([2a4b4f1](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/2a4b4f11a697e2b7a62fd98e9c29573c01d58afc))
+* test micom and steadycom ([b79b91f](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/b79b91ffbb686bd3b824cd6b93b338e86e9dca63))
+* update da workflow snakefile. Rever antes de entregar no final para o fna ([af81dcf](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/af81dcfa6ef07fb2bfe018b9530ae4e90d242ed6))
+
+
+### Bug Fixes
+
+* add include memote and outputs of memote in rule all ([05f2ca3](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/05f2ca3ef38a5c2bb4338be927502ac9d2e915bd))
+* adicionar thresholds de qualidade. Seguem o minimo razoavel para modelos metabolicos (completude &gt;=50 e contaminação &lt; = 10) - Podemos ter que alterar isto ([7cba2d7](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/7cba2d7243a8988ad3dbf025444056aa462f5420))
+* Correção do path relativo e adição de um local para filtragem downstream ([ea8ade6](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/ea8ade6c5a5183fec47958ef0dcfd0d10a1788cf))
+* correção dos paths e adicionar a rule do filter_checkM ([a19d38c](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/a19d38c8e88af517b3b8cac94711d274e04658a1))
+* correct workflow paths and carveme arguments ([37b486e](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/37b486e812f639e06175df75939cf3899a0b1391))
+* Corrects output names — SMETANA uses -o as a prefix, not as a filename. It passes a generic prefix and renames to the names expected by Snakemake. ([e33de8a](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/e33de8a8fdd95f496a67d4e087099e8463df0355))
+* corrigir caminhos e argumentos do workflow ([35ea1c4](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/35ea1c4a22c3c8358861189a892cd32b55bd85c5))
+* Dependencies correction ([e53eeac](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/e53eeacd072735c54b2d26f49329f48c4da4e931))
+* desnecessário e limpeza estética ([f1c86f3](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/f1c86f3c4e5e00bbb70b9de4f1ab101bd05b7441))
+* Envs do template, não necessário ([98e8a75](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/98e8a75a7b8b84030e2a7c6b020e360e4c4e1ebe))
+* implement MICOM and SteadyCom wrappers, fix SMETANA flags ([6dde237](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/6dde2379e021dbcc5dc950e7020b975c484dcff4))
+* são apenas documentação descritiva, o snakemake nao usa estes ficheiros, não faz falta ([2716e69](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/2716e694897d3fb9bba1545f1baba4ad84b92924))
+* schemas validam parametros do template original que nao fazem parte deste workflow ([4b67bef](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/4b67bef9c85ac1e97bbf0bf6eeac283fedbc0d75))
+* script validação do template, não faz falta ([cd1ae88](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/cd1ae8878dabd484492638795867dc565a46c3b8))
+* solver change to scip ([c3cd989](https://github.com/brunosate21-a11y/codigo-sem-commit/commit/c3cd989ef95e660aa3cd77d0f80a073dce947430))
+
 ## [1.3.0](https://github.com/snakemake-workflows/snakemake-workflow-template/compare/v1.2.0...v1.3.0) (2026-03-27)
 
 
