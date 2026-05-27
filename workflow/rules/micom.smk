@@ -10,6 +10,7 @@ rule micom:
         "../envs/micom.yaml"
 
     script:
-        "../scripts/micom.py"
+        "../scripts/micom_script.py"
+
 
         

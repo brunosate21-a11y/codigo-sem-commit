@@ -5,9 +5,9 @@ import pandas as pd
 from micom import Community
 
 models = snakemake.input.models
-abundances_out = snakemake.output.abundances
+exchange_out = snakemake.output.exchange_fluxes
 model_paths = [models] if isinstance(models, str) else list(models)
-os.makedirs(os.path.dirname(abundances_out), exist_ok=True)
+os.makedirs(os.path.dirname(exchange_out), exist_ok=True)
 
 taxonomy = pd.DataFrame({
     "id": [os.path.splitext(os.path.basename(p))[0] for p in model_paths],
@@ -17,9 +17,8 @@ taxonomy = pd.DataFrame({
 
 print(f"A construir comunidade com {len(model_paths)} modelo(s)...")
 com = Community(taxonomy, solver="glpk")
-print("A correr optimize (FBA, fraction=0.5)...")
+print("A correr optimize (FBA)...")
 sol = com.optimize()
 print("Members:")
 print(sol.members)
-sol.members.to_csv(abundances_out, sep="\t")
-print(f"SteadyCom concluido. Resultados guardados em {abundances_out}")
+sol.members.to_csv(exchange_out, sep="\t")
